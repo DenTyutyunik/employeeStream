@@ -56,12 +56,12 @@ public class EmployeeController {
         return employeeService.salaryMinByDepartment(departmentId);
     }
 
-    @GetMapping("/departments/all")
+    @GetMapping(path = "/departments/all", params = "departmentId")
     public List<Employee> employeesByDepartment(@RequestParam int departmentId) {
         return employeeService.employeesByDepartment(departmentId);
     }
 
-    @GetMapping("/departments/all/")
+    @GetMapping("/departments/all")
     public List<Employee> employeesDivideByDepartment() {
         return employeeService.employeesDivideByDepartment();
     }
